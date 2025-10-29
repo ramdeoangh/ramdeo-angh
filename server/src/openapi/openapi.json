@@ -1,0 +1,21 @@
+{
+  "openapi": "3.0.3",
+  "info": { "title": "Ramdeo API", "version": "0.1.0" },
+  "paths": {
+    "/health": { "get": { "summary": "Healthcheck", "responses": { "200": { "description": "OK" } } } },
+    "/api/auth/register": { "post": { "requestBody": { "required": true }, "responses": { "200": { "description": "Registered" } } } },
+    "/api/auth/login": { "post": { "requestBody": { "required": true }, "responses": { "200": { "description": "Logged in" } } } },
+    "/api/auth/logout": { "post": { "responses": { "200": { "description": "Logged out" } } } },
+    "/api/auth/me": { "get": { "responses": { "200": { "description": "Current user" } } } },
+    "/api/blog/posts": { "get": { "parameters": [], "responses": { "200": { "description": "Posts" } } }, "post": { "responses": { "201": { "description": "Created" } } } },
+    "/api/blog/posts/{slug}": { "get": { "parameters": [{"name":"slug","in":"path","required":true}], "responses": { "200": { "description": "Post" }, "404": { "description": "Not found" } } } },
+    "/api/blog/categories": { "get": { "responses": { "200": { "description": "Categories" } } }, "post": { "responses": { "201": { "description": "Created" } } } },
+    "/api/blog/tags": { "get": { "responses": { "200": { "description": "Tags" } } }, "post": { "responses": { "201": { "description": "Created" } } } },
+    "/api/blog/rss.xml": { "get": { "responses": { "200": { "description": "RSS feed" } } } },
+    "/api/cv": { "get": { "responses": { "200": { "description": "Current CV" } } } },
+    "/api/cv/upload": { "post": { "responses": { "200": { "description": "Uploaded" } } } },
+    "/api/cv/re-extract": { "post": { "responses": { "200": { "description": "Re-extracted" } } } }
+  }
+}
+
+

@@ -1,0 +1,32 @@
+{
+  "name": "ramdeo-angh-monorepo",
+  "private": true,
+  "packageManager": "pnpm@9.9.0",
+  "version": "0.1.0",
+  "workspaces": [
+    "client",
+    "server",
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "format": "prettier --write .",
+    "test": "pnpm -r test"
+  },
+  "devDependencies": {
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json,md,css,scss}": [
+      "prettier --write"
+    ]
+  }
+}
+
+

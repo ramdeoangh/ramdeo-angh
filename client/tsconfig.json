@@ -1,0 +1,14 @@
+{
+  "extends": "../packages/config/tsconfig.web.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@types/*": ["../packages/types/src/*"],
+      "@ui/*": ["../packages/ui/src/*"]
+    }
+  },
+  "include": ["src", "vite.config.ts"],
+  "references": []
+}
+
+
